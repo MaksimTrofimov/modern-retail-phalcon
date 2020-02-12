@@ -1,0 +1,33 @@
+<?php echo \Phalcon\Tag::javascriptInclude("js/listAddress.js"); ?>
+
+<select class="mdb-select md-form my-3">
+  <option value="" selected>All user</option>
+  <?php foreach ($users as $user) : ?>
+    <option value="<?= $user->user_id ?>"><?= $user->firstname ?></option>
+  <?php endforeach; ?>
+</select>
+
+<table class="table table-striped"  id="user-list">
+  <thead>
+    <tr>
+      <th scope="col">Address id</th>
+      <th scope="col">User id</th>
+      <th scope="col">City</th>
+      <th scope="col">Postcode</th>
+      <th scope="col">Region</th>
+      <th scope="col">Street</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+<div id="paginate-total">Total:<span></span></div>
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="#" id="first">First</a></li>
+    <li class="page-item"><a class="page-link" href="#" id="previous">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#" id="current">1</a></li>
+    <li class="page-item"><a class="page-link" href="#" id="next">Next</a></li>
+    <li class="page-item"><a class="page-link" href="#" id="last">Last</a></li>
+  </ul>
+</nav>

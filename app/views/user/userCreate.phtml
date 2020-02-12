@@ -1,0 +1,35 @@
+<form action="/user/userCreate" method="POST">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputFirstname4">Firstname</label>
+      <input required name="firstname" type="text" class="form-control" id="inputFirstnamel4" placeholder="">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputLastname4">Lastname</label>
+      <input required name="lastname" type="text" class="form-control" id="inputLastnamel4" placeholder="">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Password</label>
+      <input required name="password" type="password" class="form-control" id="inputPassword4" placeholder="">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Email</label>
+      <input required  name="email" type="email" class="form-control" id="inputEmail4" placeholder="">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="inputUserType">User type</label>
+      <select required id="inputUserType" class="form-control" name="user_type">
+        <option value="">Choose...</option>
+        <option value="0">admin</option>
+        <option value="1">client</option>
+      </select>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Create</button>
+</form>
+
+  <?php $this->flashSession->output() ?>
